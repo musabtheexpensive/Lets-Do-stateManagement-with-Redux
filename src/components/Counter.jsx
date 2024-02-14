@@ -1,7 +1,9 @@
+import { useContext } from "react";
+import { COUNTER_CONTEXT } from "../context/CounterContext";
 
 
-const Counter = ({count,setCount}) => {
-
+const Counter = () => {
+const {count,setCount}=useContext(COUNTER_CONTEXT)
   return (
   <div>
       <div className="flex shrink-0 gap-2 bg-gray-100 px-10 m-10 rounded-xl mx-w-md justify-center items-center">

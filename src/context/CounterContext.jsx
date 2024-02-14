@@ -1,9 +1,11 @@
-import React, { createContext } from "react";
+import { createContext, useState } from "react";
 
+export const COUNTER_CONTEXT = createContext();
 const CounterContext = ({ children }) => {
-  const COUNTER_CONTEXT = createContext();
+  const [count, setCount] = useState(0);
+
   const value = {
-    count: 0,
+    count,setCount
   };
   return (
     <COUNTER_CONTEXT.Provider value={value}>
