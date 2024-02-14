@@ -1,10 +1,17 @@
+import { useSelector, useDispatch } from "react-redux";
 
 const Counter = () => {
-    return (
-        <div>
-            <h1>counter</h1>
-        </div>
-    );
+  const count = useSelector((state) => state.counter.count);
+  console.log(count);
+  return (
+    <div>
+      <button>Increment</button>
+      <div>
+        <h1>0</h1>
+      </div>
+      <button>Decrement</button>
+    </div>
+  );
 };
 
 export default Counter;
